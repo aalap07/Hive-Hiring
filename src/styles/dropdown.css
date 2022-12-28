@@ -1,0 +1,143 @@
+.dd-wrapper {
+    position: relative;
+    width: 300px;
+    font-size: 1rem;
+    user-select: none;
+}
+
+.dd-wrapper .dd-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+    background-color: white;
+    line-height: 38px;
+    cursor: default;
+    cursor: pointer;
+}
+
+.dd-wrapper .dd-header span {
+    display: flex;
+    margin-right: 20px;
+}
+
+.dd-wrapper .dd-header-title {
+    margin: 2px 20px;
+    font-weight: 300;
+}
+
+.dd-wrapper .angle-down {
+    margin-right: 20px;
+    color: black;
+}
+
+.dd-wrapper .dd-list {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    max-height: 215px;
+    border: 1px solid #dfdfdf;
+    border-top: none;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0 2px 5px -1px #e8e8e8;
+    background-color: white;
+    font-weight: 700;
+    text-align: left;
+    -webkit-overflow-scrolling: touch;
+}
+
+.dd-wrapper .dd-list .dd-scroll-list {
+    overflow-y: scroll;
+    max-height: 215px;
+    padding: 15px 0;
+}
+
+.dd-wrapper .dd-list .dd-scroll-list .dd-list-item {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: default;
+    cursor: pointer;
+}
+
+.dd-wrapper .dd-list .dd-scroll-list .dd-list-item.no-result {
+    font-weight: normal;
+    cursor: default;
+}
+
+.dd-wrapper .dd-list .dd-scroll-list .dd-list-item.no-result:hover {
+    background-color: transparent;
+    color: black;
+}
+
+.dd-wrapper .dd-list .dd-scroll-list .dd-list-item:hover {
+    background-color: #FFCC01;
+    color: white;
+}
+
+.dd-wrapper .dd-list .dd-scroll-list .dd-list-item:hover>span>svg>path {
+    fill: white;
+}
+
+.dd-wrapper .dd-list .dd-list-search-bar {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: none;
+    border-bottom: 1px solid #DFDFDF;
+    font-size: inherit;
+}
+
+.dd-wrapper .dd-list .dd-list-search-bar::placeholder {
+    color: #c8c8c8;
+}
+
+.dd-wrapper .dd-list.searchable {
+    overflow-y: hidden;
+    padding: 0;
+}
+
+.dd-wrapper .dd-list.searchable .dd-scroll-list {
+    max-height: calc(215px - 40px);
+    padding: 10px 0;
+}
+
+.dd-wrapper button {
+    overflow: visible;
+    width: inherit;
+    margin: inherit;
+    padding: inherit;
+    border: none;
+    background: inherit;
+    font: inherit;
+    line-height: normal;
+    color: inherit;
+    text-align: inherit;
+    -webkit-appearance: none;
+}
+
+.dd-wrapper ul, .dd-wrapper li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dd-wrapper p {
+    margin: 0;
+    padding: 0;
+}
+
+.dd-wrapper * {
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
